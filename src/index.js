@@ -1,13 +1,9 @@
 import _ from 'lodash';
-import { readFileSync } from 'node:fs';
-import getPath from './helpers.js';
+import { readFilePath } from './helpers.js';
 
 const genDiff = (filePath1, filePath2) => {
-  const readPathFile1 = readFileSync(getPath(filePath1), 'utf-8');
-  const readPathFile2 = readFileSync(getPath(filePath2), 'utf-8');
-
-  const file1 = JSON.parse(readPathFile1);
-  const file2 = JSON.parse(readPathFile2);
+  const file1 = JSON.parse(readFilePath(filePath1));
+  const file2 = JSON.parse(readFilePath(filePath2));
 
   const file1Keys = Object.keys(file1);
   const file2Keys = Object.keys(file2);
