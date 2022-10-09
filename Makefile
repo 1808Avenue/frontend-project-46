@@ -10,5 +10,5 @@ fix:
 test:
 	npx jest
 
-test coverage:
+test-coverage:
 	npx jest --coverage
