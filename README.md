@@ -6,3 +6,6 @@
 
 <h3>Тестовый запуск:</h3>
 <a href="https://asciinema.org/a/Nw1XGyDPAmrpiJRmz8tsZtnMX" target="_blank"><img style="width: 389px; height: 330px;" src="https://asciinema.org/a/Nw1XGyDPAmrpiJRmz8tsZtnMX.svg" /></a>
+
+<h3>YML</h3
+<a href="https://asciinema.org/a/LkJD43YBDN0KmmRGLUd5fgLU5" target="_blank"><img style="width: 389px; height: 330px;" src="https://asciinema.org/a/LkJD43YBDN0KmmRGLUd5fgLU5.svg" /></a>
