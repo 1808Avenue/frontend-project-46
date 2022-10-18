@@ -1,18 +1,14 @@
 import { expect, test } from '@jest/globals';
 import { readFileSync } from 'node:fs';
+import getGlobalPath from '../src/helpers.js';
 import parser from '../src/parsers.js';
-import getFullPath from '../src/helpers.js';
 
 test('parser', () => {
-  const data1 = readFileSync(getFullPath('file1.json'));
-  const data2 = readFileSync(getFullPath('file1.yml'));
-  const expectedValue = {
-    host: 'hexlet.io',
-    timeout: 50,
-    proxy: '123.234.53.22',
-    follow: false,
-  };
+  const data1 = readFileSync(getGlobalPath('file1.json'));
+  const data2 = readFileSync(getGlobalPath('file1.yml'));
+  const expectedJson = parser(readFileSync(getGlobalPath('file1.json')));
+  const expectedYml = parser(readFileSync(getGlobalPath('file1.yml')));
 
-  expect(parser(data1, '.json')).toEqual(expectedValue);
-  expect(parser(data2, '.yml')).toEqual(expectedValue);
+  expect(parser(data1, '.json')).toEqual(expectedJson);
+  expect(parser(data2, '.yml')).toEqual(expectedYml);
 });
