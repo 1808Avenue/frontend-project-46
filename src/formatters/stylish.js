@@ -9,11 +9,11 @@ export const stringify = (currentValue, depth = 1) => {
     return `${currentValue}`;
   }
 
-  const currentIndent = getIndent(depth);
+  const indent = getIndent(depth);
   const bracketIndent = getBracketIndent(depth);
   const lines = Object
     .entries(currentValue)
-    .map(([key, val]) => `${currentIndent}${key}: ${stringify(val, depth + 1)}`);
+    .map(([key, val]) => `${indent}  ${key}: ${stringify(val, depth + 1)}`);
 
   return [
     '{',
