@@ -1,5 +1,5 @@
-import { expect, test } from '@jest/globals';
 import { readFileSync } from 'node:fs';
+import { expect, test } from '@jest/globals';
 import getFixturePath from '../src/helpers.js';
 import parser from '../src/parsers.js';
 
