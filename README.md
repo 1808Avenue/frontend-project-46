@@ -9,10 +9,14 @@
 <p>Node.js версии 13 и выше.</p>
 
 <h2>Описание:</h2>
-<h3>Пример для плоских структур:</h3>
+<h3>Форматтер "stylish" - Пример для плоских структур:</h3>
 <a href="https://asciinema.org/a/LkJD43YBDN0KmmRGLUd5fgLU5" target="_blank"><img style="width: 390px; height: 330px;" src="https://asciinema.org/a/LkJD43YBDN0KmmRGLUd5fgLU5.svg" /></a>
 <h2></h2>
 
-<h3>Пример для вложенных структур:</h3>
+<h3>Форматтер "stylish" - Пример для вложенных структур:</h3>
 <a href="https://asciinema.org/a/daH1Z4rOsGCpAFRT1TT2lAEx9" target="_blank"><img style="width: 390px; height: 330px;" src="https://asciinema.org/a/daH1Z4rOsGCpAFRT1TT2lAEx9.svg" /></a>
+<h2></h2>
+
+<h3>Форматтер "plain"</h3>
+<a href="https://asciinema.org/a/m56z1nTCfPZzN1L22ZsPq2yEV" target="_blank"><img style="width: 390px; height: 330px;" src="https://asciinema.org/a/m56z1nTCfPZzN1L22ZsPq2yEV.svg" /></a>
 <h2></h2>
