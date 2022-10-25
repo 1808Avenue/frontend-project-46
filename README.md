@@ -4,7 +4,7 @@
 <a href="https://codeclimate.com/github/1808Avenue/frontend-project-46/maintainability"><img src="https://api.codeclimate.com/v1/badges/c35f1130346f0d3ef2e2/maintainability" /></a>
 <a href="https://codeclimate.com/github/1808Avenue/frontend-project-46/test_coverage"><img src="https://api.codeclimate.com/v1/badges/c35f1130346f0d3ef2e2/test_coverage" /></a>
 
-<p>Второй учебный проект, под названием "Вычислитель отличий".<br>Программа, определяющая разницу между двумя структурами данных.</p>
+<p>Второй учебный проект, под названием "Вычислитель отличий" - программа, определяющая разницу между двумя структурами данных.</p>
 <h6>Возможности утилиты:</h6>
 <ul>
   <li><pre>Поддержка разных входных форматов: "<b>yaml</b>", "<b>json</b>"</pre></li>
@@ -18,7 +18,7 @@
 <ol>
     <li><pre>git clone</pre></li>
     <li><pre>cd frontend-project-46/</pre></li>
-    <li><pre>make instal</pre></li>
+    <li><pre>make install</pre></li>
     <li><pre>npm link</pre></li>
     <li><pre>Готово к запуску...</pre></li>
   <li><pre><b>Введите команду: </b>gendiff -h</pre></li>
@@ -28,7 +28,7 @@
 <h2>Описание:</h2>
 
 <h3>Пример для плоских структур:</h3>
-<a href="https://asciinema.org/a/LkJD43YBDN0KmmRGLUd5fgLU5" target="_blank"><img style="width: 390px; height: 330px;" src="https://asciinema.org/a/LkJD43YBDN0KmmRGLUd5fgLU5.svg" /></a>
+<a href="https://asciinema.org/a/GlACmJdTtUGGaOaAxAnDAX8NB" target="_blank"><img style="width: 390px; height: 330px;" src="https://asciinema.org/a/GlACmJdTtUGGaOaAxAnDAX8NB.svg" /></a>
 <h2></h2>
 
 <h3>Пример для вложенных структур:</h3>
