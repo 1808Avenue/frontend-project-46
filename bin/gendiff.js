@@ -1,12 +1,15 @@
 #!/usr/bin/env node
 import { program } from 'commander';
-import getDiff from '../src/index.js';
+import defineOutputFormat from '../src/formatters/index.js';
+import genDiff from '../src/index.js';
 
 program
   .description('Compares two configuration files and shows a difference.')
   .version('0.0.1', '-V, --version', 'output the version number')
-  .option('-f, --format <type>', 'output format (default: "stylish")')
+  .option('-f, --format <type>', 'output format', 'stylish')
   .arguments('<filepath1> <filepath2>')
-  .action((filepath1, filepath2) => console.log(getDiff(filepath1, filepath2)));
+  .action((filepath1, filepath2) => {
+    console.log(genDiff(filepath1, filepath2, defineOutputFormat(program.opts().format)));
+  });
 
 program.parse(process.argv);
