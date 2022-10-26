@@ -2,12 +2,19 @@ import stylish from './stylish.js';
 import plain from './plain.js';
 
 const defineOutputFormat = (formatName) => {
-  if (formatName === 'plain') {
-    return plain;
+  switch (formatName) {
+    case 'stylish':
+      return stylish;
+
+    case 'plain':
+      return plain;
+
+    case 'json':
+      return JSON.stringify;
+
+    default:
+      throw new Error(`Unknown format name: '${formatName}'!`);
   }
-  if (formatName === 'json') {
-    return JSON.stringify;
-  }
-  return stylish;
 };
+
 export default defineOutputFormat;
