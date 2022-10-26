@@ -1,33 +1,28 @@
 import _ from 'lodash';
 
-const defineDiff = (file1, file2) => {
-  const file1Keys = Object.keys(file1);
-  const file2Keys = Object.keys(file2);
-  const allKeys = file1Keys.concat(file2Keys);
-  const uniqueKeys = allKeys.reduce((acc, key) => {
-    if (acc.includes(key)) {
-      return acc;
-    }
-    return [...acc, key];
-  }, []);
+const defineDiff = (data1, data2) => {
+  const data1Keys = Object.keys(data1);
+  const data2Keys = Object.keys(data2);
+  const allKeys = data1Keys.concat(data2Keys);
+  const uniqueKeys = _.union(allKeys);
   const sortedUniqueKeys = _.sortBy(uniqueKeys);
 
   const diff = sortedUniqueKeys.map((key) => {
-    if (file1Keys.includes(key) && file2Keys.includes(key)) {
-      if (_.isObject(file1[key]) && _.isObject(file2[key])) {
-        return { key, children: defineDiff(file1[key], file2[key]), type: 'nested' };
+    if (data1Keys.includes(key) && data2Keys.includes(key)) {
+      if (_.isPlainObject(data1[key]) && _.isPlainObject(data2[key])) {
+        return { key, children: defineDiff(data1[key], data2[key]), type: 'nested' };
       }
-      if (file1[key] === file2[key]) {
-        return { key, value1: file1[key], type: 'unchanged' };
+      if (data1[key] === data2[key]) {
+        return { key, value1: data1[key], type: 'unchanged' };
       }
       return {
-        key, value1: file1[key], value2: file2[key], type: 'changed',
+        key, value1: data1[key], value2: data2[key], type: 'changed',
       };
     }
-    if (file1Keys.includes(key) && !file2Keys.includes(key)) {
-      return { key, value1: file1[key], type: 'deleted' };
+    if (data1Keys.includes(key) && !data2Keys.includes(key)) {
+      return { key, value1: data1[key], type: 'deleted' };
     }
-    return { key, value2: file2[key], type: 'added' };
+    return { key, value2: data2[key], type: 'added' };
   });
   return diff;
 };
